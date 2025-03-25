@@ -1,0 +1,12 @@
+# Ensure dockerflow_orchestrator is tracked
+!dockerflow_orchestrator/
+!dockerflow_orchestrator/**
+
+# Ignore specific unwanted files inside dockerflow_orchestrator
+dockerflow_orchestrator/venv/
+dockerflow_orchestrator/.env
+dockerflow_orchestrator/__pycache__/
+dockerflow_orchestrator/*.log
+dockerflow_orchestrator/*.pid
+dockerflow_orchestrator/.gitignore
+.env

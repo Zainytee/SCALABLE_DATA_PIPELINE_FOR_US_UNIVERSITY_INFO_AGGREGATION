@@ -35,7 +35,7 @@ resource "aws_iam_user_policy" "dec_s3" {
 
 #Create an s3 bucket to store terraform state file
 resource "aws_s3_bucket" "dec_state_bucket" {
-  bucket = "my-tf-state-bucket-hackathon"
+  bucket = "my-tf-state-bucket-hackathon20"
 
   tags = {
     Name        = "terraform_state bucket"
@@ -46,7 +46,7 @@ resource "aws_s3_bucket" "dec_state_bucket" {
 
 #Create an s3 bucket for the raw data
 resource "aws_s3_bucket" "dec_data_bucket" {
-  bucket = "my-tf-data-bucket-hackathon"
+  bucket = "my-tf-data-bucket-hackathon20"
 
   tags = {
     Name        = "Data Bucket"

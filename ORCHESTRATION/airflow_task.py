@@ -4,12 +4,16 @@ from datetime import datetime
 import requests
 import json
 import boto3
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 
 # Extraction Function
 def extract_data():
     URL = "https://api.data.gov/ed/collegescorecard/v1/schools.json"
-    API_KEY = "G6OLu9FgUvL3GNn9sokkiMuTEIM8ubr5DPY6YT10"
+    API_KEY = os.getenv("COLLEGE_SCORECARD_API_KEY")
     FIELDS = (
         "id,school.name,school.city,school.state,school.address,"
         "latest.admissions.admission_rate.overall,"

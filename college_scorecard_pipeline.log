@@ -1,0 +1,26 @@
+2025-03-25 17:51:30,347 INFO: Fetched page 1 successfully.
+2025-03-25 17:51:33,056 INFO: Fetched page 2 successfully.
+2025-03-25 17:51:35,846 INFO: Fetched page 3 successfully.
+2025-03-25 17:51:38,383 INFO: Fetched page 4 successfully.
+2025-03-25 17:51:41,188 INFO: Fetched page 5 successfully.
+2025-03-25 17:51:43,928 INFO: Fetched page 6 successfully.
+2025-03-25 17:51:46,498 INFO: Fetched page 7 successfully.
+2025-03-25 17:51:49,333 INFO: Fetched page 8 successfully.
+2025-03-25 17:51:51,998 INFO: Fetched page 9 successfully.
+2025-03-25 17:51:54,738 INFO: Fetched page 10 successfully.
+2025-03-25 17:51:54,839 INFO: Saved 1000 colleges to all_college_data.json
+2025-03-25 17:51:54,934 INFO: Found credentials in shared credentials file: ~/.aws/credentials
+2025-03-25 17:52:05,835 INFO: File uploaded to s3://my-tf-data-bucket-hackathon20/raw/all_college_data.json
+2025-03-25 19:42:34,681 INFO: Fetched page 1 successfully.
+2025-03-25 19:42:37,359 INFO: Fetched page 2 successfully.
+2025-03-25 19:42:39,898 INFO: Fetched page 3 successfully.
+2025-03-25 19:42:42,310 INFO: Fetched page 4 successfully.
+2025-03-25 19:42:44,644 INFO: Fetched page 5 successfully.
+2025-03-25 19:42:47,104 INFO: Fetched page 6 successfully.
+2025-03-25 19:42:49,815 INFO: Fetched page 7 successfully.
+2025-03-25 19:42:52,477 INFO: Fetched page 8 successfully.
+2025-03-25 19:42:55,548 INFO: Fetched page 9 successfully.
+2025-03-25 19:42:58,995 INFO: Fetched page 10 successfully.
+2025-03-25 19:42:59,129 INFO: Saved 1000 colleges to all_college_data.json
+2025-03-25 19:42:59,261 INFO: Found credentials in shared credentials file: ~/.aws/credentials
+2025-03-25 19:43:14,145 INFO: File uploaded to s3://my-tf-data-bucket-hackathon20/raw/all_college_data.json

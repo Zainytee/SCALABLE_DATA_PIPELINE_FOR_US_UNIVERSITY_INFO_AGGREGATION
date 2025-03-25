@@ -4,6 +4,9 @@ import json
 import logging
 import time
 import boto3
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Configure logging
 logging.basicConfig(
@@ -14,8 +17,12 @@ logging.basicConfig(
         logging.StreamHandler()
     ]
 )
+# Retrieve the API key from environment variables
+API_KEY = os.environ.get("COLLEGE_SCORECARD_API_KEY")
+if not API_KEY:
+    logging.error("API key not found. Please set COLLEGE_SCORECARD_API_KEY in your .env file.")
+    exit(1)
 
-API_KEY = "AGGv1ovetThDwRy2CIUQr9Izdsous9B1WZFifhfb"
 BASE_URL = "https://api.data.gov/ed/collegescorecard/v1/schools"
 FIELDS = (
     "id,school.name,school.city,school.state,school.ownership,"

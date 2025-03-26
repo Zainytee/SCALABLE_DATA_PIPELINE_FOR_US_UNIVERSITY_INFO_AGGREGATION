@@ -1,48 +1,46 @@
-Overview
-========
+# SCALABLE_DATA_PIPELINE_FOR_US_UNIVERSITY_INFO_AGGREGATION
 
-Welcome to Astronomer! This project was generated after you ran 'astro dev init' using the Astronomer CLI. This readme describes the contents of the project, as well as how to run Apache Airflow on your local machine.
+## Introduction
+The quest to gain knowledge and attend a good school has increased the demand for accurate and up-to-date information about colleges and universities in the United States. However, finding such information remains a major challenge for prospective students. With thousands of institutions nationwide, it becomes difficult to compare them based on key factors such as tuition fees, graduation rates, admission requirements, and available programs.
 
-Project Contents
-================
+This project aims to solve this problem by building a scalable data pipeline that automates the extraction, transformation, and storage of university-related data from the College Scorecard API. The system retrieves information for the top 1000 schools in the U.S. based on rankings and organizes it in a structured format suitable for analytics and visualization. This enables students to make informed decisions using a data-driven approach.
 
-Your Astro project contains the following files and folders:
+## Implementation Details
 
-- dags: This folder contains the Python files for your Airflow DAGs. By default, this directory includes one example DAG:
-    - `example_astronauts`: This DAG shows a simple ETL pipeline example that queries the list of astronauts currently in space from the Open Notify API and prints a statement for each astronaut. The DAG uses the TaskFlow API to define tasks in Python, and dynamic task mapping to dynamically print a statement for each astronaut. For more on how this DAG works, see our [Getting started tutorial](https://www.astronomer.io/docs/learn/get-started-with-airflow).
-- Dockerfile: This file contains a versioned Astro Runtime Docker image that provides a differentiated Airflow experience. If you want to execute other commands or overrides at runtime, specify them here.
-- include: This folder contains any additional files that you want to include as part of your project. It is empty by default.
-- packages.txt: Install OS-level packages needed for your project by adding them to this file. It is empty by default.
-- requirements.txt: Install Python packages needed for your project by adding them to this file. It is empty by default.
-- plugins: Add custom or community plugins for your project to this file. It is empty by default.
-- airflow_settings.yaml: Use this local-only file to specify Airflow Connections, Variables, and Pools instead of entering them in the Airflow UI as you develop DAGs in this project.
+### Data Extraction
 
-Deploy Your Project Locally
-===========================
+The extraction process is implemented using Python, leveraging the requests library to pull data from the College Scorecard API. The extracted data includes school details, admission statistics, tuition costs, and performance metrics.
 
-1. Start Airflow on your local machine by running 'astro dev start'.
+### Data Storage & Transformation
 
-This command will spin up 4 Docker containers on your machine, each for a different Airflow component:
+Once extracted, the data is initially stored in an AWS S3 bucket. From there, an AWS Lambda function processes and transforms the raw data, handling inconsistencies and normalizing it for efficient analysis. The transformed data is then moved into ClickHouse, a high-performance columnar database optimized for analytical queries.
 
-- Postgres: Airflow's Metadata Database
-- Webserver: The Airflow component responsible for rendering the Airflow UI
-- Scheduler: The Airflow component responsible for monitoring and triggering tasks
-- Triggerer: The Airflow component responsible for triggering deferred tasks
+### Pipeline Orchestration
 
-2. Verify that all 4 Docker containers were created by running 'docker ps'.
+The entire workflow is managed using Apache Airflow, ensuring automation, scheduling, and monitoring of data ingestion and transformation tasks. Airflow enables the system to scale efficiently while maintaining reliability.
 
-Note: Running 'astro dev start' will start your project with the Airflow Webserver exposed at port 8080 and Postgres exposed at port 5432. If you already have either of those ports allocated, you can either [stop your existing Docker containers or change the port](https://www.astronomer.io/docs/astro/cli/troubleshoot-locally#ports-are-not-available-for-my-local-airflow-webserver).
+### Data Accessibility & Visualization
 
-3. Access the Airflow UI for your local Airflow project. To do so, go to http://localhost:8080/ and log in with 'admin' for both your Username and Password.
+To facilitate analysis and decision-making, the processed data is structured in a well-documented warehouse schema. This ensures ease of use for data analysts and developers working with the dataset. Additionally, dashboards were created using tools  Power BI to provide interactive visualizations of key university metrics and admission criteria.
 
-You should also be able to access your Postgres Database at 'localhost:5432/postgres'.
+### Error Handling & Monitoring
 
-Deploy Your Project to Astronomer
-=================================
+Comprehensive logging and error-handling mechanisms are in place to track API request failures, data inconsistencies, and processing issues. This ensures data integrity and reliability throughout the pipeline.
 
-If you have an Astronomer account, pushing code to a Deployment on Astronomer is simple. For deploying instructions, refer to Astronomer documentation: https://www.astronomer.io/docs/astro/deploy-code/
+### Technology Stack
 
-Contact
-=======
+* Programming Language: Python
 
-The Astronomer CLI is maintained with love by the Astronomer team. To report a bug or suggest a change, reach out to our support.
+* API Access: Requests library
+
+* Data Storage: AWS S3 (raw data), ClickHouse (structured storage)
+
+* Data Processing: AWS Lambda (data transformation)
+
+* Orchestration: Apache Airflow
+
+* Visualization Tools: Power BI
+
+### MetaData
+This can be found in the metadata file in the repository.
+

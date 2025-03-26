@@ -1,8 +1,4 @@
-# Ensure dockerflow_orchestrator is tracked
-!dockerflow_orchestrator/
-!dockerflow_orchestrator/**
-
-# Ignore specific unwanted files inside dockerflow_orchestrator
+# Ignore specific unwanted files inside airflow
 airflow/venv/
 airflow/.env
 airflow/__pycache__/

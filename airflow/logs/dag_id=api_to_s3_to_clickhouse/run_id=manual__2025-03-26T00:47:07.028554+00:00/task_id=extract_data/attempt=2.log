@@ -1,0 +1,85 @@
+[2025-03-26T00:55:30.149+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-03-26T00:55:30.192+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: api_to_s3_to_clickhouse.extract_data manual__2025-03-26T00:47:07.028554+00:00 [queued]>
+[2025-03-26T00:55:30.202+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: api_to_s3_to_clickhouse.extract_data manual__2025-03-26T00:47:07.028554+00:00 [queued]>
+[2025-03-26T00:55:30.202+0000] {taskinstance.py:2306} INFO - Starting attempt 2 of 2
+[2025-03-26T00:55:30.223+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): extract_data> on 2025-03-26 00:47:07.028554+00:00
+[2025-03-26T00:55:30.233+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'api_to_s3_to_clickhouse', 'extract_data', 'manual__2025-03-26T00:47:07.028554+00:00', '--job-id', '16', '--raw', '--subdir', 'DAGS_FOLDER/extract.py', '--cfg-path', '/tmp/tmpdhcwj8ki']
+[2025-03-26T00:55:30.236+0000] {standard_task_runner.py:91} INFO - Job 16: Subtask extract_data
+[2025-03-26T00:55:30.242+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=381) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-03-26T00:55:30.243+0000] {standard_task_runner.py:63} INFO - Started process 396 to run task
+[2025-03-26T00:55:30.297+0000] {task_command.py:426} INFO - Running <TaskInstance: api_to_s3_to_clickhouse.extract_data manual__2025-03-26T00:47:07.028554+00:00 [running]> on host 372b19244b0d
+[2025-03-26T00:55:30.422+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='api_to_s3_to_clickhouse' AIRFLOW_CTX_TASK_ID='extract_data' AIRFLOW_CTX_EXECUTION_DATE='2025-03-26T00:47:07.028554+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-26T00:47:07.028554+00:00'
+[2025-03-26T00:55:30.423+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-03-26T00:57:01.714+0000] {local_task_job_runner.py:124} ERROR - Received SIGTERM. Terminating subprocesses
+[2025-03-26T00:57:01.716+0000] {process_utils.py:132} INFO - Sending 15 to group 396. PIDs of all processes in the group: [396]
+[2025-03-26T00:57:01.717+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 396
+[2025-03-26T00:57:01.717+0000] {taskinstance.py:2611} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-03-26T00:57:01.718+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-03-26T00:57:01.788+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/extract.py", line 38, in extract_data
+    response = requests.get(URL, params=params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connectionpool.py", line 537, in _make_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/urllib3/connection.py", line 466, in getresponse
+    httplib_response = super().getresponse()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/http/client.py", line 1428, in getresponse
+    response.begin()
+  File "/usr/local/lib/python3.12/http/client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/http/client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/socket.py", line 708, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/ssl.py", line 1252, in recv_into
+    return self.read(nbytes, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/ssl.py", line 1104, in read
+    return self._sslobj.read(len, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 2613, in signal_handler
+    raise AirflowTaskTerminated("Task received SIGTERM signal")
+airflow.exceptions.AirflowTaskTerminated: Task received SIGTERM signal
+[2025-03-26T00:57:01.822+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=api_to_s3_to_clickhouse, task_id=extract_data, run_id=manual__2025-03-26T00:47:07.028554+00:00, execution_date=20250326T004707, start_date=20250326T005530, end_date=20250326T005701
+[2025-03-26T00:57:01.932+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=396, status='terminated', exitcode=2, started='00:55:29') (396) terminated with exit code 2
+[2025-03-26T00:57:01.933+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 143
+[2025-03-26T00:57:01.990+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check

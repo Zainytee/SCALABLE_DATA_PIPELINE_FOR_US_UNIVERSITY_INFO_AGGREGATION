@@ -1,0 +1,118 @@
+version: '3.4'
+
+x-common:
+  &common
+  build:
+    context: ./airflow
+    dockerfile: ./Dockerfile
+  user: "${AIRFLOW_UID}:0"
+  env_file:
+    - .env
+  environment:
+    - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres/airflow
+    - COLLEGE_SCORECARD_API_KEY=${COLLEGE_SCORECARD_API_KEY}
+    - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+    - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+    - AWS_DEFAULT_REGION=${AWS_DEFAULT_REGION}
+  volumes:
+    - ./airflow/dags:/opt/airflow/dags
+    - ./airflow/logs:/opt/airflow/logs
+    - ./airflow/plugins:/opt/airflow/plugins
+    - /var/run/docker.sock:/var/run/docker.sock
+
+services:
+  postgres:
+    image: postgres:13
+    container_name: "postgres"
+    ports:
+      - "5434:5432"
+    environment:
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow
+      POSTGRES_DB: airflow
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "airflow"]
+      interval: 10s
+      retries: 5
+    volumes:
+      - postgres-db-volume:/var/lib/postgresql/data
+
+  clickhouse:
+    image: clickhouse/clickhouse-server:latest
+    container_name: "clickhouse"
+    ports:
+      - "8123:8123"
+      - "9000:9000"
+      - "9709:9009"
+    environment:
+      CLICKHOUSE_USER: admin
+      CLICKHOUSE_PASSWORD: mysecurepassword
+    ulimits:
+      nproc: 65535
+      nofile:
+        soft: 262144
+        hard: 262144
+    volumes:
+      - ./clickhouse:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: wget --no-verbose --tries=1 --spider http://localhost:8123/ping || exit 1
+
+  clickhouseclient:
+    image: clickhouse/clickhouse-client
+    container_name: "clickhouseclient"
+    command: [ '--host', 'clickhouse', '--port', '9000', '-u', 'admin', '--password', 'mysecurepassword' ]
+    depends_on:
+      clickhouse:
+        condition: service_healthy
+
+  scheduler:
+    <<: *common
+    container_name: airflow-scheduler
+    command: scheduler
+    restart: on-failure
+    depends_on:
+      postgres:
+        condition: service_healthy
+    ports:
+      - "8793:8793"
+
+  webserver:
+    <<: *common
+    container_name: airflow-webserver
+    restart: always
+    command: webserver
+    depends_on:
+      postgres:
+        condition: service_healthy
+    ports:
+      - "8080:8080"
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 30s
+      retries: 5
+
+  airflow-init:
+    <<: *common
+    container_name: airflow-init
+    depends_on:
+      postgres:
+        condition: service_healthy
+    entrypoint: /bin/bash
+    command:
+      - -c
+      - |
+        mkdir -p /opt/airflow/logs /opt/airflow/dags /opt/airflow/plugins
+        chmod -R 777 /opt/airflow
+        airflow db init
+
+networks:
+  data-eng-network:
+    driver: bridge
+
+volumes:
+  postgres-db-volume:
+  clickhouse-data:
+  clickhouse-logs:
+  clickhouse-config:
+  clickhouse-user:

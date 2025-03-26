@@ -1,0 +1,46 @@
+[2025-03-26T03:20:24.488+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-03-26T03:20:24.658+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: api_to_s3_to_clickhouse.load_into_clickhouse manual__2025-03-26T03:10:56.411641+00:00 [queued]>
+[2025-03-26T03:20:24.686+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: api_to_s3_to_clickhouse.load_into_clickhouse manual__2025-03-26T03:10:56.411641+00:00 [queued]>
+[2025-03-26T03:20:24.687+0000] {taskinstance.py:2306} INFO - Starting attempt 2 of 2
+[2025-03-26T03:20:24.736+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): load_into_clickhouse> on 2025-03-26 03:10:56.411641+00:00
+[2025-03-26T03:20:24.762+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'api_to_s3_to_clickhouse', 'load_into_clickhouse', 'manual__2025-03-26T03:10:56.411641+00:00', '--job-id', '65', '--raw', '--subdir', 'DAGS_FOLDER/extract.py', '--cfg-path', '/tmp/tmp8m49fes5']
+[2025-03-26T03:20:24.768+0000] {standard_task_runner.py:91} INFO - Job 65: Subtask load_into_clickhouse
+[2025-03-26T03:20:24.777+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=1296) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-03-26T03:20:24.779+0000] {standard_task_runner.py:63} INFO - Started process 1311 to run task
+[2025-03-26T03:20:24.920+0000] {task_command.py:426} INFO - Running <TaskInstance: api_to_s3_to_clickhouse.load_into_clickhouse manual__2025-03-26T03:10:56.411641+00:00 [running]> on host 7ea2041f8442
+[2025-03-26T03:20:25.218+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='api_to_s3_to_clickhouse' AIRFLOW_CTX_TASK_ID='load_into_clickhouse' AIRFLOW_CTX_EXECUTION_DATE='2025-03-26T03:10:56.411641+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-26T03:10:56.411641+00:00'
+[2025-03-26T03:20:25.221+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-03-26T03:20:25.460+0000] {credentials.py:1147} INFO - Found credentials in environment variables.
+[2025-03-26T03:20:29.429+0000] {logging_mixin.py:188} INFO - ✅ Downloaded from S3: /tmp/all_college_data.json
+[2025-03-26T03:20:29.833+0000] {logging_mixin.py:188} INFO - 🔍 First 5 rows of data before inserting: [[0.7014, 0.0, 0.0, 31650.0, 31650.0, 6251.0, 0.7249, 243.0, 1028.0, 'Private Nonprofit', 0.6033000000000001, 'Arizona Christian University', 'Glendale', 'AZ', '1 W. Firestorm Way', 105899], [0.0, 0.0, 0.0, 0.0, 0.0, 11183.0, 0.5988, 4763.0, 1972.0, 'Proprietary', 0.6217, 'Universal Technical Institute of Arizona Inc', 'Avondale', 'AZ', '10695 West Pierce Street', 106041], [0.0, 0.0, 0.0, 2680.0, 9340.0, 6762.0, 0.042300000000000004, 1239.0, 3577.0, 'Public', 0.64, 'Yavapai College', 'Prescott', 'AZ', '1100 E Sheldon St', 106148], [0.6146, 21.0, 1089.0, 8366.0, 18957.0, 14500.0, 0.381, 1985.0, 4802.0, 'Public', 0.7452000000000001, 'University of Arkansas at Little Rock', 'Little Rock', 'AR', '2801 S University Ave', 106245], [0.0, 0.0, 0.0, 0.0, 0.0, 13000.0, 0.4806, 200.0, 1287.0, 'Public', nan, 'University of Arkansas for Medical Sciences', 'Little Rock', 'AR', '4301 W Markham', 106263]]
+[2025-03-26T03:20:29.855+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-03-26T03:20:29.860+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/extract.py", line 159, in load_into_clickhouse
+    client.insert("college_data", formatted_data, column_names=column_names)
+  File "/home/airflow/.local/lib/python3.12/site-packages/clickhouse_connect/driver/client.py", line 624, in insert
+    context = self.create_insert_context(table,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/clickhouse_connect/driver/client.py", line 741, in create_insert_context
+    raise ProgrammingError(f'Unrecognized column {ex} in table {table}') from None
+clickhouse_connect.driver.exceptions.ProgrammingError: Unrecognized column 'latest_admissions_admission_rate_overall' in table college_data
+[2025-03-26T03:20:29.915+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=api_to_s3_to_clickhouse, task_id=load_into_clickhouse, run_id=manual__2025-03-26T03:10:56.411641+00:00, execution_date=20250326T031056, start_date=20250326T032024, end_date=20250326T032029
+[2025-03-26T03:20:29.969+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 65 for task load_into_clickhouse (Unrecognized column 'latest_admissions_admission_rate_overall' in table college_data; 1311)
+[2025-03-26T03:20:30.019+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2025-03-26T03:20:30.075+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-03-26T03:20:30.085+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

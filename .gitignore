@@ -1,11 +1,9 @@
-.git
+
+# Ignore specific unwanted files inside airflow
+airflow/venv/
+airflow/.env
+airflow/__pycache__/
+airflow/*.log
+airflow/*.pid
+airflow/.gitignore
 .env
-.DS_Store
-airflow_settings.yaml
-__pycache__/
-astro
-.venv
-airflow-webserver.pid
-webserver_config.py
-airflow.cfg
-airflow.db

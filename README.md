@@ -1,9 +1,13 @@
+
 # SCALABLE_DATA_PIPELINE_FOR_US_UNIVERSITY_INFO_AGGREGATION
 
 ## Introduction
 The quest to gain knowledge and attend a good school has increased the demand for accurate and up-to-date information about colleges and universities in the United States. However, finding such information remains a major challenge for prospective students. With thousands of institutions nationwide, it becomes difficult to compare them based on key factors such as tuition fees, graduation rates, admission requirements, and available programs.
 
 This project aims to solve this problem by building a scalable data pipeline that automates the extraction, transformation, and storage of university-related data from the College Scorecard API. The system retrieves information for the top 1000 schools in the U.S. based on rankings and organizes it in a structured format suitable for analytics and visualization. This enables students to make informed decisions using a data-driven approach.
+
+![WhatsApp Image 2025-03-26 at 23 51 33](https://github.com/user-attachments/assets/8b3fcebe-eb88-4403-920e-9e72a28bfa5b)
+
 
 ## Implementation Details
 

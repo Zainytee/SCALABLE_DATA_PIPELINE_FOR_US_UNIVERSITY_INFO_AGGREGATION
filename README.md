@@ -42,5 +42,6 @@ Comprehensive logging and error-handling mechanisms are in place to track API re
 * Visualization Tools: Power BI
 
 ### MetaData
-This can be found in the metadata file in the repository.
+
+<img width="727" alt="Screenshot 2025-03-26 at 21 34 19" src="https://github.com/user-attachments/assets/0938b38e-c66e-460a-aa3b-79727342b3a7" />
 

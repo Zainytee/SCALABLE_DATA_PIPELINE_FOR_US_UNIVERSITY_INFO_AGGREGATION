@@ -1,31 +1,25 @@
-# Overview
+# SCALABLE_DATA_PIPELINE_FOR_US_UNIVERSITY_INFO_AGGREGATION
 
-Welcome to Astronomer! This project was generated after you ran `astro dev init` using the Astronomer CLI. This README describes the contents of the project, how to run Apache Airflow on your local machine, and details our ETL process—including our custom data transformation using an AWS Lambda function.
+## Introduction
+The quest to gain knowledge and attend a good school has increased the demand for accurate and up-to-date information about colleges and universities in the United States. However, finding such information remains a major challenge for prospective students. With thousands of institutions nationwide, it becomes difficult to compare them based on key factors such as tuition fees, graduation rates, admission requirements, and available programs.
 
-# Project Contents
+This project aims to solve this problem by building a scalable data pipeline that automates the extraction, transformation, and storage of university-related data from the College Scorecard API. The system retrieves information for the top 1000 schools in the U.S. based on rankings and organizes it in a structured format suitable for analytics and visualization. This enables students to make informed decisions using a data-driven approach.
 
-Your Astro project contains the following files and folders:
+## Implementation Details
 
-- **dags**: This folder contains the Python files for your Airflow DAGs. By default, this directory includes one example DAG:
-  - `example_astronauts`: This DAG shows a simple ETL pipeline example that queries the list of astronauts currently in space from the Open Notify API and prints a statement for each astronaut. The DAG uses the TaskFlow API to define tasks in Python and dynamic task mapping to dynamically print a statement for each astronaut. For more on how this DAG works, see our [Getting Started Tutorial](https://www.astronomer.io/docs/learn/get-started-with-airflow).
-- **Dockerfile**: Contains a versioned Astro Runtime Docker image that provides a differentiated Airflow experience. Use this file to execute other commands or overrides at runtime.
-- **include**: This folder contains any additional files you want to include as part of your project. It is empty by default.
-- **packages.txt**: Install OS-level packages needed for your project by adding them to this file. It is empty by default.
-- **requirements.txt**: Install Python packages needed for your project by adding them to this file. It is empty by default.
-- **plugins**: Add custom or community plugins for your project to this folder. It is empty by default.
-- **airflow_settings.yaml**: Use this local-only file to specify Airflow Connections, Variables, and Pools instead of entering them in the Airflow UI as you develop DAGs in this project.
+### Data Extraction
 
-# Transformation Process Approach
-
-In addition to our standard extraction and loading tasks, we have implemented a data transformation process using an AWS Lambda function. This process ensures that raw data is accurately transformed and enriched with custom ranking information before further processing.
-
+The extraction process is implemented using Python, leveraging the requests library to pull data from the College Scorecard API. The extracted data includes school details, admission statistics, tuition costs, and performance metrics.
 **Steps:**
 
 1. **Extraction:**
    - Raw JSON data is extracted from the College Scorecard API by an Airflow task.
    - The raw file is saved in a raw S3 bucket with a filename such as `college_data_YYYY-MM-DD.json`.
+  
+### Data Storage & Transformation
 
-2. **Lambda Transformation:**
+Once extracted, the data is initially stored in an AWS S3 bucket. From there, an AWS Lambda function processes and transforms the raw data, handling inconsistencies and normalizing it for efficient analysis. The transformed data is then moved into ClickHouse, a high-performance columnar database optimized for analytical queries.
+ **Lambda Transformation:**
    - An S3 event notification triggers a Lambda function when a new raw file is uploaded.
    - The Lambda function:
      - Reads the raw JSON file from S3.
@@ -36,30 +30,35 @@ In addition to our standard extraction and loading tasks, we have implemented a 
      - Converts the transformed data into a CSV file.
      - Uploads the transformed CSV to a target S3 bucket (e.g., `transformed-college-data`) with a filename like `college_data_YYYY-MM-DD.csv`.
 
-3. **Airflow Integration:**
-   - An S3KeySensor task in Airflow monitors the target bucket to confirm the transformed file is available before downstream tasks continue.
+### Pipeline Orchestration
 
-# Deploy Your Project Locally
+The entire workflow is managed using Apache Airflow, ensuring automation, scheduling, and monitoring of data ingestion and transformation tasks. Airflow enables the system to scale efficiently while maintaining reliability.
+ - An S3KeySensor task in Airflow monitors the target bucket to confirm the transformed file is available before downstream tasks continue.
 
-1. **Start Airflow on Your Local Machine:**
-   - Run `astro dev start` to spin up Docker containers for:
-     - Postgres (Airflow's metadata database)
-     - Webserver (Airflow UI)
-     - Scheduler (monitors and triggers tasks)
-     - Triggerer (triggers deferred tasks)
 
-2. **Verify Containers:**
-   - Run `docker ps` to ensure all containers are running.
-   - Note: The Airflow Webserver is exposed at port 8080 and Postgres at port 5432. Adjust if needed.
+### Data Accessibility & Visualization
 
-3. **Access the Airflow UI:**
-   - Open [http://localhost:8080/](http://localhost:8080/) and log in with `admin` as both your username and password.
-   - Your Postgres database is accessible at `localhost:5432/postgres`.
+To facilitate analysis and decision-making, the processed data is structured in a well-documented warehouse schema. This ensures ease of use for data analysts and developers working with the dataset. Additionally, dashboards were created using tools  Power BI to provide interactive visualizations of key university metrics and admission criteria.
 
-# Deploy Your Project to Astronomer
+### Error Handling & Monitoring
 
-If you have an Astronomer account, pushing code to a Deployment on Astronomer is simple. For deployment instructions, refer to the [Astronomer documentation](https://www.astronomer.io/docs/astro/deploy-code/).
+Comprehensive logging and error-handling mechanisms are in place to track API request failures, data inconsistencies, and processing issues. This ensures data integrity and reliability throughout the pipeline.
 
-# Contact
+### Technology Stack
 
-The Astronomer CLI is maintained with love by the Astronomer team. To report a bug or suggest a change, please reach out to our support.
+* Programming Language: Python
+
+* API Access: Requests library
+
+* Data Storage: AWS S3 (raw data), ClickHouse (structured storage)
+
+* Data Processing: AWS Lambda (data transformation)
+
+* Orchestration: Apache Airflow
+
+* Visualization Tools: Power BI
+
+### MetaData
+
+<img width="727" alt="Screenshot 2025-03-26 at 21 34 19" src="https://github.com/user-attachments/assets/0938b38e-c66e-460a-aa3b-79727342b3a7" />
+

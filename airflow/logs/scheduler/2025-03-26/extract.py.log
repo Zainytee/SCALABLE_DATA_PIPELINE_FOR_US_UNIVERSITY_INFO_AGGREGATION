@@ -3252,3 +3252,262 @@
 [2025-03-26T04:14:47.686+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:14:47.684+0000] {dag.py:3096} INFO - Sync 1 DAGs
 [2025-03-26T04:14:47.763+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:14:47.762+0000] {dag.py:3954} INFO - Setting next_dagrun for api_to_s3_to_clickhouse to 2025-03-26 00:00:00+00:00, run_after=2025-03-27 00:00:00+00:00
 [2025-03-26T04:14:47.822+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/extract.py took 1.596 seconds
+[2025-03-26T04:15:18.082+0000] {processor.py:161} INFO - Started process (PID=1909) to work on /opt/airflow/dags/extract.py
+[2025-03-26T04:15:18.084+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/extract.py for tasks to queue
+[2025-03-26T04:15:18.093+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:15:18.092+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/extract.py
+[2025-03-26T04:15:19.158+0000] {processor.py:840} INFO - DAG(s) 'api_to_s3_to_clickhouse' retrieved from /opt/airflow/dags/extract.py
+[2025-03-26T04:15:19.200+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:15:19.200+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-03-26T04:15:19.238+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:15:19.237+0000] {dag.py:3954} INFO - Setting next_dagrun for api_to_s3_to_clickhouse to 2025-03-26 00:00:00+00:00, run_after=2025-03-27 00:00:00+00:00
+[2025-03-26T04:15:19.274+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/extract.py took 1.210 seconds
+[2025-03-26T04:15:49.527+0000] {processor.py:161} INFO - Started process (PID=1911) to work on /opt/airflow/dags/extract.py
+[2025-03-26T04:15:49.532+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/extract.py for tasks to queue
+[2025-03-26T04:15:49.538+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:15:49.537+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/extract.py
+[2025-03-26T04:15:51.038+0000] {processor.py:840} INFO - DAG(s) 'api_to_s3_to_clickhouse' retrieved from /opt/airflow/dags/extract.py
+[2025-03-26T04:15:51.115+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:15:51.114+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-03-26T04:15:51.176+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:15:51.176+0000] {dag.py:3954} INFO - Setting next_dagrun for api_to_s3_to_clickhouse to 2025-03-26 00:00:00+00:00, run_after=2025-03-27 00:00:00+00:00
+[2025-03-26T04:15:51.235+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/extract.py took 1.730 seconds
+[2025-03-26T04:16:21.511+0000] {processor.py:161} INFO - Started process (PID=1913) to work on /opt/airflow/dags/extract.py
+[2025-03-26T04:16:21.515+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/extract.py for tasks to queue
+[2025-03-26T04:16:21.521+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:16:21.520+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/extract.py
+[2025-03-26T04:16:22.793+0000] {processor.py:840} INFO - DAG(s) 'api_to_s3_to_clickhouse' retrieved from /opt/airflow/dags/extract.py
+[2025-03-26T04:16:22.904+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:16:22.902+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-03-26T04:16:23.029+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:16:23.029+0000] {dag.py:3954} INFO - Setting next_dagrun for api_to_s3_to_clickhouse to 2025-03-26 00:00:00+00:00, run_after=2025-03-27 00:00:00+00:00
+[2025-03-26T04:16:23.127+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/extract.py took 1.636 seconds
+[2025-03-26T04:16:53.403+0000] {processor.py:161} INFO - Started process (PID=1915) to work on /opt/airflow/dags/extract.py
+[2025-03-26T04:16:53.405+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/extract.py for tasks to queue
+[2025-03-26T04:16:53.410+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:16:53.409+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/extract.py
+[2025-03-26T04:16:54.371+0000] {processor.py:840} INFO - DAG(s) 'api_to_s3_to_clickhouse' retrieved from /opt/airflow/dags/extract.py
+[2025-03-26T04:16:54.431+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:16:54.430+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-03-26T04:16:54.482+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:16:54.482+0000] {dag.py:3954} INFO - Setting next_dagrun for api_to_s3_to_clickhouse to 2025-03-26 00:00:00+00:00, run_after=2025-03-27 00:00:00+00:00
+[2025-03-26T04:16:54.523+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/extract.py took 1.140 seconds
+[2025-03-26T04:17:24.604+0000] {processor.py:161} INFO - Started process (PID=1917) to work on /opt/airflow/dags/extract.py
+[2025-03-26T04:17:24.607+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/extract.py for tasks to queue
+[2025-03-26T04:17:24.613+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:17:24.613+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/extract.py
+[2025-03-26T04:17:25.672+0000] {processor.py:840} INFO - DAG(s) 'api_to_s3_to_clickhouse' retrieved from /opt/airflow/dags/extract.py
+[2025-03-26T04:17:25.755+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:17:25.754+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-03-26T04:17:25.832+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:17:25.831+0000] {dag.py:3954} INFO - Setting next_dagrun for api_to_s3_to_clickhouse to 2025-03-26 00:00:00+00:00, run_after=2025-03-27 00:00:00+00:00
+[2025-03-26T04:17:25.884+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/extract.py took 1.295 seconds
+[2025-03-26T04:17:55.988+0000] {processor.py:161} INFO - Started process (PID=1919) to work on /opt/airflow/dags/extract.py
+[2025-03-26T04:17:55.990+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/extract.py for tasks to queue
+[2025-03-26T04:17:55.993+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:17:55.992+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/extract.py
+[2025-03-26T04:17:57.202+0000] {processor.py:840} INFO - DAG(s) 'api_to_s3_to_clickhouse' retrieved from /opt/airflow/dags/extract.py
+[2025-03-26T04:17:57.344+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:17:57.342+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-03-26T04:17:57.459+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:17:57.456+0000] {dag.py:3954} INFO - Setting next_dagrun for api_to_s3_to_clickhouse to 2025-03-26 00:00:00+00:00, run_after=2025-03-27 00:00:00+00:00
+[2025-03-26T04:17:57.517+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/extract.py took 1.541 seconds
+[2025-03-26T04:18:27.730+0000] {processor.py:161} INFO - Started process (PID=1921) to work on /opt/airflow/dags/extract.py
+[2025-03-26T04:18:27.732+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/extract.py for tasks to queue
+[2025-03-26T04:18:27.736+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:18:27.735+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/extract.py
+[2025-03-26T04:18:29.811+0000] {processor.py:840} INFO - DAG(s) 'api_to_s3_to_clickhouse' retrieved from /opt/airflow/dags/extract.py
+[2025-03-26T04:18:29.894+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:18:29.893+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-03-26T04:18:29.967+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:18:29.966+0000] {dag.py:3954} INFO - Setting next_dagrun for api_to_s3_to_clickhouse to 2025-03-26 00:00:00+00:00, run_after=2025-03-27 00:00:00+00:00
+[2025-03-26T04:18:30.027+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/extract.py took 2.308 seconds
+[2025-03-26T04:19:00.365+0000] {processor.py:161} INFO - Started process (PID=1923) to work on /opt/airflow/dags/extract.py
+[2025-03-26T04:19:00.371+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/extract.py for tasks to queue
+[2025-03-26T04:19:00.381+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:19:00.380+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/extract.py
+[2025-03-26T04:19:02.932+0000] {processor.py:840} INFO - DAG(s) 'api_to_s3_to_clickhouse' retrieved from /opt/airflow/dags/extract.py
+[2025-03-26T04:19:03.029+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:19:03.027+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-03-26T04:19:03.113+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:19:03.113+0000] {dag.py:3954} INFO - Setting next_dagrun for api_to_s3_to_clickhouse to 2025-03-26 00:00:00+00:00, run_after=2025-03-27 00:00:00+00:00
+[2025-03-26T04:19:03.178+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/extract.py took 2.868 seconds
+[2025-03-26T04:50:28.348+0000] {processor.py:161} INFO - Started process (PID=1925) to work on /opt/airflow/dags/extract.py
+[2025-03-26T04:50:28.479+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/extract.py for tasks to queue
+[2025-03-26T04:50:28.498+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:50:28.496+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/extract.py
+[2025-03-26T04:50:35.167+0000] {processor.py:840} INFO - DAG(s) 'api_to_s3_to_clickhouse' retrieved from /opt/airflow/dags/extract.py
+[2025-03-26T04:50:35.318+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:50:35.317+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-03-26T04:50:35.470+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:50:35.470+0000] {dag.py:3954} INFO - Setting next_dagrun for api_to_s3_to_clickhouse to 2025-03-26 00:00:00+00:00, run_after=2025-03-27 00:00:00+00:00
+[2025-03-26T04:50:35.572+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/extract.py took 7.300 seconds
+[2025-03-26T04:51:05.745+0000] {processor.py:161} INFO - Started process (PID=1927) to work on /opt/airflow/dags/extract.py
+[2025-03-26T04:51:05.748+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/extract.py for tasks to queue
+[2025-03-26T04:51:05.754+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:51:05.753+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/extract.py
+[2025-03-26T04:51:08.438+0000] {processor.py:840} INFO - DAG(s) 'api_to_s3_to_clickhouse' retrieved from /opt/airflow/dags/extract.py
+[2025-03-26T04:51:08.513+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:51:08.511+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-03-26T04:51:08.588+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:51:08.587+0000] {dag.py:3954} INFO - Setting next_dagrun for api_to_s3_to_clickhouse to 2025-03-26 00:00:00+00:00, run_after=2025-03-27 00:00:00+00:00
+[2025-03-26T04:51:08.682+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/extract.py took 2.992 seconds
+[2025-03-26T04:51:38.902+0000] {processor.py:161} INFO - Started process (PID=1929) to work on /opt/airflow/dags/extract.py
+[2025-03-26T04:51:38.904+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/extract.py for tasks to queue
+[2025-03-26T04:51:38.907+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:51:38.906+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/extract.py
+[2025-03-26T04:51:39.656+0000] {processor.py:840} INFO - DAG(s) 'api_to_s3_to_clickhouse' retrieved from /opt/airflow/dags/extract.py
+[2025-03-26T04:51:39.694+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:51:39.693+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-03-26T04:51:39.734+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:51:39.733+0000] {dag.py:3954} INFO - Setting next_dagrun for api_to_s3_to_clickhouse to 2025-03-26 00:00:00+00:00, run_after=2025-03-27 00:00:00+00:00
+[2025-03-26T04:51:39.764+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/extract.py took 0.875 seconds
+[2025-03-26T04:52:09.967+0000] {processor.py:161} INFO - Started process (PID=1931) to work on /opt/airflow/dags/extract.py
+[2025-03-26T04:52:09.969+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/extract.py for tasks to queue
+[2025-03-26T04:52:09.972+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:52:09.971+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/extract.py
+[2025-03-26T04:52:10.668+0000] {processor.py:840} INFO - DAG(s) 'api_to_s3_to_clickhouse' retrieved from /opt/airflow/dags/extract.py
+[2025-03-26T04:52:10.711+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:52:10.710+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-03-26T04:52:10.742+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:52:10.742+0000] {dag.py:3954} INFO - Setting next_dagrun for api_to_s3_to_clickhouse to 2025-03-26 00:00:00+00:00, run_after=2025-03-27 00:00:00+00:00
+[2025-03-26T04:52:10.779+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/extract.py took 0.821 seconds
+[2025-03-26T04:52:41.317+0000] {processor.py:161} INFO - Started process (PID=1933) to work on /opt/airflow/dags/extract.py
+[2025-03-26T04:52:41.331+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/extract.py for tasks to queue
+[2025-03-26T04:52:41.338+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:52:41.337+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/extract.py
+[2025-03-26T04:52:43.005+0000] {processor.py:840} INFO - DAG(s) 'api_to_s3_to_clickhouse' retrieved from /opt/airflow/dags/extract.py
+[2025-03-26T04:52:43.215+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:52:43.214+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-03-26T04:52:43.272+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:52:43.272+0000] {dag.py:3954} INFO - Setting next_dagrun for api_to_s3_to_clickhouse to 2025-03-26 00:00:00+00:00, run_after=2025-03-27 00:00:00+00:00
+[2025-03-26T04:52:43.409+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/extract.py took 2.127 seconds
+[2025-03-26T04:53:13.467+0000] {processor.py:161} INFO - Started process (PID=1935) to work on /opt/airflow/dags/extract.py
+[2025-03-26T04:53:13.470+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/extract.py for tasks to queue
+[2025-03-26T04:53:13.473+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:53:13.473+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/extract.py
+[2025-03-26T04:53:14.240+0000] {processor.py:840} INFO - DAG(s) 'api_to_s3_to_clickhouse' retrieved from /opt/airflow/dags/extract.py
+[2025-03-26T04:53:14.288+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:53:14.287+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-03-26T04:53:14.329+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:53:14.329+0000] {dag.py:3954} INFO - Setting next_dagrun for api_to_s3_to_clickhouse to 2025-03-26 00:00:00+00:00, run_after=2025-03-27 00:00:00+00:00
+[2025-03-26T04:53:14.367+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/extract.py took 0.916 seconds
+[2025-03-26T04:53:44.580+0000] {processor.py:161} INFO - Started process (PID=1937) to work on /opt/airflow/dags/extract.py
+[2025-03-26T04:53:44.583+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/extract.py for tasks to queue
+[2025-03-26T04:53:44.587+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:53:44.587+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/extract.py
+[2025-03-26T04:53:45.357+0000] {processor.py:840} INFO - DAG(s) 'api_to_s3_to_clickhouse' retrieved from /opt/airflow/dags/extract.py
+[2025-03-26T04:53:45.400+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:53:45.400+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-03-26T04:53:45.436+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:53:45.436+0000] {dag.py:3954} INFO - Setting next_dagrun for api_to_s3_to_clickhouse to 2025-03-26 00:00:00+00:00, run_after=2025-03-27 00:00:00+00:00
+[2025-03-26T04:53:45.486+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/extract.py took 0.919 seconds
+[2025-03-26T04:54:15.674+0000] {processor.py:161} INFO - Started process (PID=1939) to work on /opt/airflow/dags/extract.py
+[2025-03-26T04:54:15.677+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/extract.py for tasks to queue
+[2025-03-26T04:54:15.679+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:54:15.678+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/extract.py
+[2025-03-26T04:54:16.236+0000] {processor.py:840} INFO - DAG(s) 'api_to_s3_to_clickhouse' retrieved from /opt/airflow/dags/extract.py
+[2025-03-26T04:54:16.281+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:54:16.280+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-03-26T04:54:16.325+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:54:16.325+0000] {dag.py:3954} INFO - Setting next_dagrun for api_to_s3_to_clickhouse to 2025-03-26 00:00:00+00:00, run_after=2025-03-27 00:00:00+00:00
+[2025-03-26T04:54:16.359+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/extract.py took 0.694 seconds
+[2025-03-26T04:54:46.545+0000] {processor.py:161} INFO - Started process (PID=1941) to work on /opt/airflow/dags/extract.py
+[2025-03-26T04:54:46.547+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/extract.py for tasks to queue
+[2025-03-26T04:54:46.550+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:54:46.550+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/extract.py
+[2025-03-26T04:54:47.324+0000] {processor.py:840} INFO - DAG(s) 'api_to_s3_to_clickhouse' retrieved from /opt/airflow/dags/extract.py
+[2025-03-26T04:54:47.430+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:54:47.429+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-03-26T04:54:47.506+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:54:47.505+0000] {dag.py:3954} INFO - Setting next_dagrun for api_to_s3_to_clickhouse to 2025-03-26 00:00:00+00:00, run_after=2025-03-27 00:00:00+00:00
+[2025-03-26T04:54:47.576+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/extract.py took 1.042 seconds
+[2025-03-26T04:55:17.718+0000] {processor.py:161} INFO - Started process (PID=1943) to work on /opt/airflow/dags/extract.py
+[2025-03-26T04:55:17.720+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/extract.py for tasks to queue
+[2025-03-26T04:55:17.724+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:55:17.723+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/extract.py
+[2025-03-26T04:55:18.459+0000] {processor.py:840} INFO - DAG(s) 'api_to_s3_to_clickhouse' retrieved from /opt/airflow/dags/extract.py
+[2025-03-26T04:55:18.498+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:55:18.497+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-03-26T04:55:18.531+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:55:18.530+0000] {dag.py:3954} INFO - Setting next_dagrun for api_to_s3_to_clickhouse to 2025-03-26 00:00:00+00:00, run_after=2025-03-27 00:00:00+00:00
+[2025-03-26T04:55:18.566+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/extract.py took 0.857 seconds
+[2025-03-26T04:55:48.790+0000] {processor.py:161} INFO - Started process (PID=1945) to work on /opt/airflow/dags/extract.py
+[2025-03-26T04:55:48.793+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/extract.py for tasks to queue
+[2025-03-26T04:55:48.797+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:55:48.796+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/extract.py
+[2025-03-26T04:55:49.822+0000] {processor.py:840} INFO - DAG(s) 'api_to_s3_to_clickhouse' retrieved from /opt/airflow/dags/extract.py
+[2025-03-26T04:55:49.873+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:55:49.872+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-03-26T04:55:49.924+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:55:49.924+0000] {dag.py:3954} INFO - Setting next_dagrun for api_to_s3_to_clickhouse to 2025-03-26 00:00:00+00:00, run_after=2025-03-27 00:00:00+00:00
+[2025-03-26T04:55:49.963+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/extract.py took 1.188 seconds
+[2025-03-26T04:56:20.064+0000] {processor.py:161} INFO - Started process (PID=1947) to work on /opt/airflow/dags/extract.py
+[2025-03-26T04:56:20.067+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/extract.py for tasks to queue
+[2025-03-26T04:56:20.069+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:56:20.069+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/extract.py
+[2025-03-26T04:56:20.896+0000] {processor.py:840} INFO - DAG(s) 'api_to_s3_to_clickhouse' retrieved from /opt/airflow/dags/extract.py
+[2025-03-26T04:56:20.951+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:56:20.950+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-03-26T04:56:20.998+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:56:20.997+0000] {dag.py:3954} INFO - Setting next_dagrun for api_to_s3_to_clickhouse to 2025-03-26 00:00:00+00:00, run_after=2025-03-27 00:00:00+00:00
+[2025-03-26T04:56:21.035+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/extract.py took 0.984 seconds
+[2025-03-26T04:56:51.226+0000] {processor.py:161} INFO - Started process (PID=1949) to work on /opt/airflow/dags/extract.py
+[2025-03-26T04:56:51.228+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/extract.py for tasks to queue
+[2025-03-26T04:56:51.230+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:56:51.230+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/extract.py
+[2025-03-26T04:56:51.889+0000] {processor.py:840} INFO - DAG(s) 'api_to_s3_to_clickhouse' retrieved from /opt/airflow/dags/extract.py
+[2025-03-26T04:56:51.928+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:56:51.927+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-03-26T04:56:51.957+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:56:51.956+0000] {dag.py:3954} INFO - Setting next_dagrun for api_to_s3_to_clickhouse to 2025-03-26 00:00:00+00:00, run_after=2025-03-27 00:00:00+00:00
+[2025-03-26T04:56:51.984+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/extract.py took 0.767 seconds
+[2025-03-26T04:57:22.180+0000] {processor.py:161} INFO - Started process (PID=1951) to work on /opt/airflow/dags/extract.py
+[2025-03-26T04:57:22.182+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/extract.py for tasks to queue
+[2025-03-26T04:57:22.185+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:57:22.184+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/extract.py
+[2025-03-26T04:57:23.009+0000] {processor.py:840} INFO - DAG(s) 'api_to_s3_to_clickhouse' retrieved from /opt/airflow/dags/extract.py
+[2025-03-26T04:57:23.050+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:57:23.049+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-03-26T04:57:23.085+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:57:23.084+0000] {dag.py:3954} INFO - Setting next_dagrun for api_to_s3_to_clickhouse to 2025-03-26 00:00:00+00:00, run_after=2025-03-27 00:00:00+00:00
+[2025-03-26T04:57:23.120+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/extract.py took 0.954 seconds
+[2025-03-26T04:57:53.308+0000] {processor.py:161} INFO - Started process (PID=1953) to work on /opt/airflow/dags/extract.py
+[2025-03-26T04:57:53.309+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/extract.py for tasks to queue
+[2025-03-26T04:57:53.311+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:57:53.311+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/extract.py
+[2025-03-26T04:57:54.051+0000] {processor.py:840} INFO - DAG(s) 'api_to_s3_to_clickhouse' retrieved from /opt/airflow/dags/extract.py
+[2025-03-26T04:57:54.105+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:57:54.104+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-03-26T04:57:54.153+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:57:54.153+0000] {dag.py:3954} INFO - Setting next_dagrun for api_to_s3_to_clickhouse to 2025-03-26 00:00:00+00:00, run_after=2025-03-27 00:00:00+00:00
+[2025-03-26T04:57:54.193+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/extract.py took 0.895 seconds
+[2025-03-26T04:58:24.392+0000] {processor.py:161} INFO - Started process (PID=1955) to work on /opt/airflow/dags/extract.py
+[2025-03-26T04:58:24.395+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/extract.py for tasks to queue
+[2025-03-26T04:58:24.398+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:58:24.397+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/extract.py
+[2025-03-26T04:58:25.050+0000] {processor.py:840} INFO - DAG(s) 'api_to_s3_to_clickhouse' retrieved from /opt/airflow/dags/extract.py
+[2025-03-26T04:58:25.095+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:58:25.094+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-03-26T04:58:25.128+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:58:25.127+0000] {dag.py:3954} INFO - Setting next_dagrun for api_to_s3_to_clickhouse to 2025-03-26 00:00:00+00:00, run_after=2025-03-27 00:00:00+00:00
+[2025-03-26T04:58:25.155+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/extract.py took 0.774 seconds
+[2025-03-26T04:58:55.345+0000] {processor.py:161} INFO - Started process (PID=1957) to work on /opt/airflow/dags/extract.py
+[2025-03-26T04:58:55.346+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/extract.py for tasks to queue
+[2025-03-26T04:58:55.352+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:58:55.350+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/extract.py
+[2025-03-26T04:58:56.010+0000] {processor.py:840} INFO - DAG(s) 'api_to_s3_to_clickhouse' retrieved from /opt/airflow/dags/extract.py
+[2025-03-26T04:58:56.073+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:58:56.072+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-03-26T04:58:56.116+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:58:56.116+0000] {dag.py:3954} INFO - Setting next_dagrun for api_to_s3_to_clickhouse to 2025-03-26 00:00:00+00:00, run_after=2025-03-27 00:00:00+00:00
+[2025-03-26T04:58:56.155+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/extract.py took 0.825 seconds
+[2025-03-26T04:59:26.348+0000] {processor.py:161} INFO - Started process (PID=1959) to work on /opt/airflow/dags/extract.py
+[2025-03-26T04:59:26.352+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/extract.py for tasks to queue
+[2025-03-26T04:59:26.366+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:59:26.365+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/extract.py
+[2025-03-26T04:59:27.130+0000] {processor.py:840} INFO - DAG(s) 'api_to_s3_to_clickhouse' retrieved from /opt/airflow/dags/extract.py
+[2025-03-26T04:59:27.171+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:59:27.171+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-03-26T04:59:27.210+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:59:27.210+0000] {dag.py:3954} INFO - Setting next_dagrun for api_to_s3_to_clickhouse to 2025-03-26 00:00:00+00:00, run_after=2025-03-27 00:00:00+00:00
+[2025-03-26T04:59:27.243+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/extract.py took 0.908 seconds
+[2025-03-26T04:59:57.417+0000] {processor.py:161} INFO - Started process (PID=1961) to work on /opt/airflow/dags/extract.py
+[2025-03-26T04:59:57.418+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/extract.py for tasks to queue
+[2025-03-26T04:59:57.421+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:59:57.421+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/extract.py
+[2025-03-26T04:59:58.045+0000] {processor.py:840} INFO - DAG(s) 'api_to_s3_to_clickhouse' retrieved from /opt/airflow/dags/extract.py
+[2025-03-26T04:59:58.082+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:59:58.081+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-03-26T04:59:58.115+0000] {logging_mixin.py:188} INFO - [2025-03-26T04:59:58.115+0000] {dag.py:3954} INFO - Setting next_dagrun for api_to_s3_to_clickhouse to 2025-03-26 00:00:00+00:00, run_after=2025-03-27 00:00:00+00:00
+[2025-03-26T04:59:58.144+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/extract.py took 0.740 seconds
+[2025-03-26T05:00:28.319+0000] {processor.py:161} INFO - Started process (PID=1963) to work on /opt/airflow/dags/extract.py
+[2025-03-26T05:00:28.321+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/extract.py for tasks to queue
+[2025-03-26T05:00:28.325+0000] {logging_mixin.py:188} INFO - [2025-03-26T05:00:28.324+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/extract.py
+[2025-03-26T05:00:29.285+0000] {processor.py:840} INFO - DAG(s) 'api_to_s3_to_clickhouse' retrieved from /opt/airflow/dags/extract.py
+[2025-03-26T05:00:29.343+0000] {logging_mixin.py:188} INFO - [2025-03-26T05:00:29.342+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-03-26T05:00:29.400+0000] {logging_mixin.py:188} INFO - [2025-03-26T05:00:29.399+0000] {dag.py:3954} INFO - Setting next_dagrun for api_to_s3_to_clickhouse to 2025-03-26 00:00:00+00:00, run_after=2025-03-27 00:00:00+00:00
+[2025-03-26T05:00:29.438+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/extract.py took 1.132 seconds
+[2025-03-26T05:00:59.620+0000] {processor.py:161} INFO - Started process (PID=1965) to work on /opt/airflow/dags/extract.py
+[2025-03-26T05:00:59.623+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/extract.py for tasks to queue
+[2025-03-26T05:00:59.626+0000] {logging_mixin.py:188} INFO - [2025-03-26T05:00:59.626+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/extract.py
+[2025-03-26T05:01:00.361+0000] {processor.py:840} INFO - DAG(s) 'api_to_s3_to_clickhouse' retrieved from /opt/airflow/dags/extract.py
+[2025-03-26T05:01:00.402+0000] {logging_mixin.py:188} INFO - [2025-03-26T05:01:00.402+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-03-26T05:01:00.432+0000] {logging_mixin.py:188} INFO - [2025-03-26T05:01:00.431+0000] {dag.py:3954} INFO - Setting next_dagrun for api_to_s3_to_clickhouse to 2025-03-26 00:00:00+00:00, run_after=2025-03-27 00:00:00+00:00
+[2025-03-26T05:01:00.459+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/extract.py took 0.850 seconds
+[2025-03-26T05:01:30.641+0000] {processor.py:161} INFO - Started process (PID=1967) to work on /opt/airflow/dags/extract.py
+[2025-03-26T05:01:30.643+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/extract.py for tasks to queue
+[2025-03-26T05:01:30.645+0000] {logging_mixin.py:188} INFO - [2025-03-26T05:01:30.645+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/extract.py
+[2025-03-26T05:01:31.654+0000] {processor.py:840} INFO - DAG(s) 'api_to_s3_to_clickhouse' retrieved from /opt/airflow/dags/extract.py
+[2025-03-26T05:01:31.703+0000] {logging_mixin.py:188} INFO - [2025-03-26T05:01:31.703+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-03-26T05:01:31.749+0000] {logging_mixin.py:188} INFO - [2025-03-26T05:01:31.749+0000] {dag.py:3954} INFO - Setting next_dagrun for api_to_s3_to_clickhouse to 2025-03-26 00:00:00+00:00, run_after=2025-03-27 00:00:00+00:00
+[2025-03-26T05:01:31.789+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/extract.py took 1.158 seconds
+[2025-03-26T05:02:01.929+0000] {processor.py:161} INFO - Started process (PID=1969) to work on /opt/airflow/dags/extract.py
+[2025-03-26T05:02:01.932+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/extract.py for tasks to queue
+[2025-03-26T05:02:01.936+0000] {logging_mixin.py:188} INFO - [2025-03-26T05:02:01.935+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/extract.py
+[2025-03-26T05:02:02.752+0000] {processor.py:840} INFO - DAG(s) 'api_to_s3_to_clickhouse' retrieved from /opt/airflow/dags/extract.py
+[2025-03-26T05:02:02.795+0000] {logging_mixin.py:188} INFO - [2025-03-26T05:02:02.794+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-03-26T05:02:02.832+0000] {logging_mixin.py:188} INFO - [2025-03-26T05:02:02.832+0000] {dag.py:3954} INFO - Setting next_dagrun for api_to_s3_to_clickhouse to 2025-03-26 00:00:00+00:00, run_after=2025-03-27 00:00:00+00:00
+[2025-03-26T05:02:02.870+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/extract.py took 0.955 seconds
+[2025-03-26T05:07:48.941+0000] {processor.py:161} INFO - Started process (PID=1971) to work on /opt/airflow/dags/extract.py
+[2025-03-26T05:07:48.944+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/extract.py for tasks to queue
+[2025-03-26T05:07:48.949+0000] {logging_mixin.py:188} INFO - [2025-03-26T05:07:48.948+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/extract.py
+[2025-03-26T05:07:50.244+0000] {processor.py:840} INFO - DAG(s) 'api_to_s3_to_clickhouse' retrieved from /opt/airflow/dags/extract.py
+[2025-03-26T05:07:50.372+0000] {logging_mixin.py:188} INFO - [2025-03-26T05:07:50.371+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-03-26T05:07:50.443+0000] {logging_mixin.py:188} INFO - [2025-03-26T05:07:50.443+0000] {dag.py:3954} INFO - Setting next_dagrun for api_to_s3_to_clickhouse to 2025-03-26 00:00:00+00:00, run_after=2025-03-27 00:00:00+00:00
+[2025-03-26T05:07:50.510+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/extract.py took 1.582 seconds
+[2025-03-26T05:08:20.746+0000] {processor.py:161} INFO - Started process (PID=1973) to work on /opt/airflow/dags/extract.py
+[2025-03-26T05:08:20.751+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/extract.py for tasks to queue
+[2025-03-26T05:08:20.757+0000] {logging_mixin.py:188} INFO - [2025-03-26T05:08:20.757+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/extract.py
+[2025-03-26T05:08:21.671+0000] {processor.py:840} INFO - DAG(s) 'api_to_s3_to_clickhouse' retrieved from /opt/airflow/dags/extract.py
+[2025-03-26T05:08:21.714+0000] {logging_mixin.py:188} INFO - [2025-03-26T05:08:21.714+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-03-26T05:08:21.759+0000] {logging_mixin.py:188} INFO - [2025-03-26T05:08:21.759+0000] {dag.py:3954} INFO - Setting next_dagrun for api_to_s3_to_clickhouse to 2025-03-26 00:00:00+00:00, run_after=2025-03-27 00:00:00+00:00
+[2025-03-26T05:08:21.796+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/extract.py took 1.064 seconds
+[2025-03-26T05:08:51.920+0000] {processor.py:161} INFO - Started process (PID=1975) to work on /opt/airflow/dags/extract.py
+[2025-03-26T05:08:51.937+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/extract.py for tasks to queue
+[2025-03-26T05:08:51.941+0000] {logging_mixin.py:188} INFO - [2025-03-26T05:08:51.940+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/extract.py
+[2025-03-26T05:08:52.988+0000] {processor.py:840} INFO - DAG(s) 'api_to_s3_to_clickhouse' retrieved from /opt/airflow/dags/extract.py
+[2025-03-26T05:08:53.063+0000] {logging_mixin.py:188} INFO - [2025-03-26T05:08:53.063+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-03-26T05:08:53.111+0000] {logging_mixin.py:188} INFO - [2025-03-26T05:08:53.110+0000] {dag.py:3954} INFO - Setting next_dagrun for api_to_s3_to_clickhouse to 2025-03-26 00:00:00+00:00, run_after=2025-03-27 00:00:00+00:00
+[2025-03-26T05:08:53.193+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/extract.py took 1.285 seconds
+[2025-03-26T05:09:23.371+0000] {processor.py:161} INFO - Started process (PID=1977) to work on /opt/airflow/dags/extract.py
+[2025-03-26T05:09:23.374+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/extract.py for tasks to queue
+[2025-03-26T05:09:23.376+0000] {logging_mixin.py:188} INFO - [2025-03-26T05:09:23.376+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/extract.py
+[2025-03-26T05:09:24.156+0000] {processor.py:840} INFO - DAG(s) 'api_to_s3_to_clickhouse' retrieved from /opt/airflow/dags/extract.py
+[2025-03-26T05:09:24.196+0000] {logging_mixin.py:188} INFO - [2025-03-26T05:09:24.196+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-03-26T05:09:24.226+0000] {logging_mixin.py:188} INFO - [2025-03-26T05:09:24.226+0000] {dag.py:3954} INFO - Setting next_dagrun for api_to_s3_to_clickhouse to 2025-03-26 00:00:00+00:00, run_after=2025-03-27 00:00:00+00:00
+[2025-03-26T05:09:24.257+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/extract.py took 0.897 seconds
+[2025-03-26T05:09:54.428+0000] {processor.py:161} INFO - Started process (PID=1979) to work on /opt/airflow/dags/extract.py
+[2025-03-26T05:09:54.430+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/extract.py for tasks to queue
+[2025-03-26T05:09:54.433+0000] {logging_mixin.py:188} INFO - [2025-03-26T05:09:54.432+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/extract.py
+[2025-03-26T05:09:55.174+0000] {processor.py:840} INFO - DAG(s) 'api_to_s3_to_clickhouse' retrieved from /opt/airflow/dags/extract.py
+[2025-03-26T05:09:55.216+0000] {logging_mixin.py:188} INFO - [2025-03-26T05:09:55.215+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-03-26T05:09:55.255+0000] {logging_mixin.py:188} INFO - [2025-03-26T05:09:55.254+0000] {dag.py:3954} INFO - Setting next_dagrun for api_to_s3_to_clickhouse to 2025-03-26 00:00:00+00:00, run_after=2025-03-27 00:00:00+00:00
+[2025-03-26T05:09:55.288+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/extract.py took 0.872 seconds
+[2025-03-26T05:10:25.470+0000] {processor.py:161} INFO - Started process (PID=1981) to work on /opt/airflow/dags/extract.py
+[2025-03-26T05:10:25.472+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/extract.py for tasks to queue
+[2025-03-26T05:10:25.475+0000] {logging_mixin.py:188} INFO - [2025-03-26T05:10:25.475+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/extract.py
+[2025-03-26T05:10:26.182+0000] {processor.py:840} INFO - DAG(s) 'api_to_s3_to_clickhouse' retrieved from /opt/airflow/dags/extract.py
+[2025-03-26T05:10:26.218+0000] {logging_mixin.py:188} INFO - [2025-03-26T05:10:26.218+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-03-26T05:10:26.258+0000] {logging_mixin.py:188} INFO - [2025-03-26T05:10:26.258+0000] {dag.py:3954} INFO - Setting next_dagrun for api_to_s3_to_clickhouse to 2025-03-26 00:00:00+00:00, run_after=2025-03-27 00:00:00+00:00
+[2025-03-26T05:10:26.296+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/extract.py took 0.838 seconds

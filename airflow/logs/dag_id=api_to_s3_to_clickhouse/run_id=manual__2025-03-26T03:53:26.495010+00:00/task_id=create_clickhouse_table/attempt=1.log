@@ -1,0 +1,19 @@
+[2025-03-26T03:58:19.630+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-03-26T03:58:19.720+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: api_to_s3_to_clickhouse.create_clickhouse_table manual__2025-03-26T03:53:26.495010+00:00 [queued]>
+[2025-03-26T03:58:19.743+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: api_to_s3_to_clickhouse.create_clickhouse_table manual__2025-03-26T03:53:26.495010+00:00 [queued]>
+[2025-03-26T03:58:19.743+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-03-26T03:58:19.777+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): create_clickhouse_table> on 2025-03-26 03:53:26.495010+00:00
+[2025-03-26T03:58:19.803+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'api_to_s3_to_clickhouse', 'create_clickhouse_table', 'manual__2025-03-26T03:53:26.495010+00:00', '--job-id', '88', '--raw', '--subdir', 'DAGS_FOLDER/extract.py', '--cfg-path', '/tmp/tmpp86f21mc']
+[2025-03-26T03:58:19.811+0000] {standard_task_runner.py:91} INFO - Job 88: Subtask create_clickhouse_table
+[2025-03-26T03:58:19.821+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=1798) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-03-26T03:58:19.823+0000] {standard_task_runner.py:63} INFO - Started process 1813 to run task
+[2025-03-26T03:58:19.950+0000] {task_command.py:426} INFO - Running <TaskInstance: api_to_s3_to_clickhouse.create_clickhouse_table manual__2025-03-26T03:53:26.495010+00:00 [running]> on host 7ea2041f8442
+[2025-03-26T03:58:20.221+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='api_to_s3_to_clickhouse' AIRFLOW_CTX_TASK_ID='create_clickhouse_table' AIRFLOW_CTX_EXECUTION_DATE='2025-03-26T03:53:26.495010+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-26T03:53:26.495010+00:00'
+[2025-03-26T03:58:20.225+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-03-26T03:58:20.359+0000] {logging_mixin.py:188} INFO - ✅ ClickHouse table created
+[2025-03-26T03:58:20.360+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-03-26T03:58:20.361+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-03-26T03:58:20.387+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=api_to_s3_to_clickhouse, task_id=create_clickhouse_table, run_id=manual__2025-03-26T03:53:26.495010+00:00, execution_date=20250326T035326, start_date=20250326T035819, end_date=20250326T035820
+[2025-03-26T03:58:20.444+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-03-26T03:58:20.498+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-03-26T03:58:20.504+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

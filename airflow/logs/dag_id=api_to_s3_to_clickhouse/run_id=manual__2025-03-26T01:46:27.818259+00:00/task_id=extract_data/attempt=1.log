@@ -1,0 +1,82 @@
+[2025-03-26T01:46:36.869+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-03-26T01:46:36.929+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: api_to_s3_to_clickhouse.extract_data manual__2025-03-26T01:46:27.818259+00:00 [queued]>
+[2025-03-26T01:46:36.941+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: api_to_s3_to_clickhouse.extract_data manual__2025-03-26T01:46:27.818259+00:00 [queued]>
+[2025-03-26T01:46:36.942+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-03-26T01:46:36.966+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): extract_data> on 2025-03-26 01:46:27.818259+00:00
+[2025-03-26T01:46:36.980+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'api_to_s3_to_clickhouse', 'extract_data', 'manual__2025-03-26T01:46:27.818259+00:00', '--job-id', '33', '--raw', '--subdir', 'DAGS_FOLDER/extract.py', '--cfg-path', '/tmp/tmpbikb_90m']
+[2025-03-26T01:46:36.984+0000] {standard_task_runner.py:91} INFO - Job 33: Subtask extract_data
+[2025-03-26T01:46:36.990+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=438) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-03-26T01:46:36.992+0000] {standard_task_runner.py:63} INFO - Started process 453 to run task
+[2025-03-26T01:46:37.081+0000] {task_command.py:426} INFO - Running <TaskInstance: api_to_s3_to_clickhouse.extract_data manual__2025-03-26T01:46:27.818259+00:00 [running]> on host 7ea2041f8442
+[2025-03-26T01:46:37.248+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='api_to_s3_to_clickhouse' AIRFLOW_CTX_TASK_ID='extract_data' AIRFLOW_CTX_EXECUTION_DATE='2025-03-26T01:46:27.818259+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-26T01:46:27.818259+00:00'
+[2025-03-26T01:46:37.250+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-03-26T01:46:53.216+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-03-26T01:46:53.217+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/extract.py", line 40, in extract_data
+    raise Exception(f"Error on page {page}: {response.text}")
+Exception: Error on page 7: <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="noindex,nofollow,noarchive" />
+    <title>An Error Occurred: Internal Server Error</title>
+    <style>body { background-color: #fff; color: #222; font: 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; margin: 0; }
+.container { margin: 30px; max-width: 600px; }
+h1 { color: #dc3545; font-size: 24px; }
+h2 { font-size: 18px; }</style>
+</head>
+<body>
+<div class="container">
+    <h1>Oops! An Error Occurred</h1>
+    <h2>The server returned a "500 Internal Server Error".</h2>
+
+    <p>
+        Something is broken. Please let us know what you were doing when this error occurred.
+        We will fix it as soon as possible. Sorry for any inconvenience caused.
+    </p>
+</div>
+</body>
+</html>
+[2025-03-26T01:46:53.229+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=api_to_s3_to_clickhouse, task_id=extract_data, run_id=manual__2025-03-26T01:46:27.818259+00:00, execution_date=20250326T014627, start_date=20250326T014636, end_date=20250326T014653
+[2025-03-26T01:46:53.246+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 33 for task extract_data (Error on page 7: <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="noindex,nofollow,noarchive" />
+    <title>An Error Occurred: Internal Server Error</title>
+    <style>body { background-color: #fff; color: #222; font: 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; margin: 0; }
+.container { margin: 30px; max-width: 600px; }
+h1 { color: #dc3545; font-size: 24px; }
+h2 { font-size: 18px; }</style>
+</head>
+<body>
+<div class="container">
+    <h1>Oops! An Error Occurred</h1>
+    <h2>The server returned a "500 Internal Server Error".</h2>
+
+    <p>
+        Something is broken. Please let us know what you were doing when this error occurred.
+        We will fix it as soon as possible. Sorry for any inconvenience caused.
+    </p>
+</div>
+</body>
+</html>; 453)
+[2025-03-26T01:46:53.281+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2025-03-26T01:46:53.310+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-03-26T01:46:53.315+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
